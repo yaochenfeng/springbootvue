@@ -13,3 +13,4 @@ EXPOSE 8080
 
 ENTRYPOINT exec java $JAVA_OPTS -Djava.security.egd=file:/dev/./urandom -jar /app.jar
 
+HEALTHCHECK --interval=30m CMD curl -f http://localhost:8080/ || exit 1
