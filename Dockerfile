@@ -19,4 +19,4 @@ EXPOSE $APP_PORT
 
 ENTRYPOINT exec java $JAVA_OPTS -Djava.security.egd=file:/dev/./urandom -jar /app.jar
 
-HEALTHCHECK --interval=10s CMD curl -f http://localhost:$APP_PORT/ || exit 1
+#HEALTHCHECK --interval=10s CMD curl -f http://localhost:$APP_PORT/health || exit 1
