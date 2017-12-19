@@ -1,3 +1,8 @@
+FROM  maven:alpine as BUILD
+WORKDIR /usr/src/app
+COPY . .
+RUN mvn -f /usr/src/app/pom.xml clean package
+
 FROM java:8-jre-alpine
 
 #add timezone and default it to Shanghai
@@ -9,8 +14,7 @@ ENV TZ=Asia/Shanghai \
     APP_PORT=8080 \
     SPRING_APPLICATION_JSON='{"server.port":$APP_PORT}'
 VOLUME /tmp
-ADD target/*.jar app.jar
-
+COPY --from=BUILD /usr/src/app/target/*.jar app.jar
 EXPOSE $APP_PORT
 
 ENTRYPOINT exec java $JAVA_OPTS -Djava.security.egd=file:/dev/./urandom -jar /app.jar
