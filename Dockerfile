@@ -1,7 +1,13 @@
+FROM node:alpine as appfront
+WORKDIR /usr/src/app
+COPY ./appfront .
+RUN npm install && npm run build
+
 FROM  maven:alpine as BUILD
 MAINTAINER kyle 282696845@qq.com
 WORKDIR /usr/src/app
 COPY . .
+COPY --from=appfront /usr/src/app/dist ./src/main/resources/static
 RUN mvn -f /usr/src/app/pom.xml clean package
 
 FROM java:8-jre-alpine
