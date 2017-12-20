@@ -17,7 +17,6 @@ target/
 
 ### NetBeans ###
 nbproject/private/
-build/
 nbbuild/
 dist/
 nbdist/
@@ -81,3 +80,4 @@ release.properties
 dependency-reduced-pom.xml
 buildNumber.properties
 .mvn
+application-dev.properties
