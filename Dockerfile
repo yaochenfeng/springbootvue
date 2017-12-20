@@ -8,7 +8,7 @@ MAINTAINER kyle 282696845@qq.com
 WORKDIR /usr/src/app
 COPY . .
 COPY --from=appfront /usr/src/app/dist ./src/main/resources/static
-RUN mvn -f /usr/src/app/pom.xml clean package
+RUN mvn -f /usr/src/app/pom.xml clean package -P prod
 
 FROM java:8-jre-alpine
 
