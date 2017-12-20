@@ -1,4 +1,5 @@
 FROM  maven:alpine as BUILD
+MAINTAINER kyle 282696845@qq.com
 WORKDIR /usr/src/app
 COPY . .
 RUN mvn -f /usr/src/app/pom.xml clean package
