@@ -3,8 +3,8 @@
 springboot + vue + docker
 
 
-[![Docker Pulls](https://img.shields.io/docker/pulls/yaochenfeng/springbootvue.svg)][hub]
-[![Docker Stars](https://img.shields.io/docker/stars/yaochenfeng/springbootvue.svg)][hub]
+![Docker Pulls](https://img.shields.io/docker/pulls/yaochenfeng/springbootvue.svg)
+![Docker Stars](https://img.shields.io/docker/stars/yaochenfeng/springbootvue.svg)
 
 ## 文件结构
 ```
