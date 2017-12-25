@@ -3,7 +3,7 @@
 springboot + vue + docker
 
 [![Docker Pulls](https://img.shields.io/docker/pulls/yaochenfeng/springbootvue.svg)](https://hub.docker.com/r/yaochenfeng/springbootvue/)
-[![Docker Stars](https://img.shields.io/docker/stars/_/ubuntu.svg)](https://hub.docker.com/r/yaochenfeng/springbootvue/)
+[![Docker Stars](https://img.shields.io/docker/stars/yaochenfeng/springbootvue.svg)](https://hub.docker.com/r/yaochenfeng/springbootvue/)
 [![Docker Build Status](https://img.shields.io/docker/build/yaochenfeng/springbootvue.svg)](https://hub.docker.com/r/yaochenfeng/springbootvue/)
 
 ## 文件结构
